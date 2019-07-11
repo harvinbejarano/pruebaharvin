@@ -1,0 +1,9 @@
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\bin\Debug\Repositories.dll
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\bin\Debug\Repositories.pdb
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\bin\Debug\Newtonsoft.Json.dll
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\bin\Debug\Newtonsoft.Json.xml
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\obj\Debug\Repositories.csproj.CoreCompileInputs.cache
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\obj\Debug\Repositories.csproj.CopyComplete
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\obj\Debug\Repositories.dll
+D:\DEVELOP\NET\MasGlobal\Back-End\slnPrueba\Repositories\obj\Debug\Repositories.pdb
