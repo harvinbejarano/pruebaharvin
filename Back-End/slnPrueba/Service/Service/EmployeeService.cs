@@ -2,6 +2,7 @@
 using Repositories.Core;
 using Service.Core;
 using Service.DTO;
+using Service.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,16 +22,14 @@ namespace Service.Service
 
         public async Task<IEnumerable<Employee>> GetEmployeesAsync()
         {
-          IEnumerable<EmployeeContract> employees =   await _EmployeeRepository.GetEmployeesAsync();
+            IEnumerable<Employee> employees = null;
+            IEnumerable<EmployeeContract> employeeList = await _EmployeeRepository.GetEmployeesAsync();
 
-            return GetDtos(employees);
+            employees = employeeList.Select(e => EmployeeFactory.CreateEmpleyee(e));
+
+            return employees.AsEnumerable();
         }
-
-
-        private IEnumerable<Employee> GetDtos(IEnumerable<EmployeeContract> employees)
-        {
-            throw new NotImplementedException();
-        }
+             
 
     }
 }
