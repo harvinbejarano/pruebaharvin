@@ -216,3 +216,9 @@ Brainshark.NHibernate.Config.Cache.cfg
 .vscode/launch.json
 output/
 **/output/*.sql
+.vs
+packages
+bin
+obj
+bin
+obj
