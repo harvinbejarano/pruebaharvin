@@ -17,6 +17,7 @@ namespace Service.Utils
 
             if (e.ContractTypeName == "HourlySalaryEmployee")
                 employee = CreateHourlySalaryEmployee(e);
+
             if (e.ContractTypeName == "MonthlySalaryEmployee")
                 employee = CreateMonthtlySalaryEmployee(e);
 
@@ -26,12 +27,32 @@ namespace Service.Utils
 
         private static MonthtlySalaryEmployee CreateMonthtlySalaryEmployee(EmployeeContract e)
         {
-            return new MonthtlySalaryEmployee() { };
+            return new MonthtlySalaryEmployee()
+            {
+                Id = e.Id,
+                Name = e.Name,
+                ContractTypeName = e.ContractTypeName,
+                RoleId = e.RoleId,
+                RoleName = e.RoleName,
+                RoleDescription = e.RoleDescription,
+                HourlySalary = e.HourlySalary,
+                MonthlySalary = e.MonthlySalary
+            };
         }
 
         private static HourlySalaryEmployee CreateHourlySalaryEmployee(EmployeeContract e)
         {
-            return new HourlySalaryEmployee() { };
+            return new HourlySalaryEmployee()
+            {
+                Id = e.Id,
+                Name = e.Name,
+                ContractTypeName = e.ContractTypeName,
+                RoleId = e.RoleId,
+                RoleName = e.RoleName,
+                RoleDescription = e.RoleDescription,
+                HourlySalary = e.HourlySalary,
+                MonthlySalary = e.MonthlySalary
+            };
         }
 
 

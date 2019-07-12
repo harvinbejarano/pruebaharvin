@@ -23,13 +23,31 @@ namespace Service.Service
         public async Task<IEnumerable<Employee>> GetEmployeesAsync()
         {
             IEnumerable<Employee> employees = null;
-            IEnumerable<EmployeeContract> employeeList = await _EmployeeRepository.GetEmployeesAsync();
+            IEnumerable<EmployeeContract>  employeeList = await GetEmployees();
 
             employees = employeeList.Select(e => EmployeeFactory.CreateEmpleyee(e));
 
             return employees.AsEnumerable();
         }
-             
+
+        public async Task<Employee> GetEmployeeAsync(int id)
+        {
+            Employee employee = null;
+
+            IEnumerable<EmployeeContract> employeeList = await GetEmployees();
+            employee = employeeList.Select(e => EmployeeFactory.CreateEmpleyee(e))
+                .Where(e => e.Id == id).SingleOrDefault();
+
+            return employee;
+        }
+
+        private async Task<IEnumerable<EmployeeContract>> GetEmployees()
+        {
+            IEnumerable<EmployeeContract> employeeList = await _EmployeeRepository.GetEmployeesAsync();
+
+            return employeeList;
+        }
+
 
     }
 }

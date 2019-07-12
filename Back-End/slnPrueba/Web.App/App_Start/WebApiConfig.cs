@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Web.App.App_Start;
 
 namespace Web.App
 {
@@ -9,7 +10,7 @@ namespace Web.App
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            config.Filters.Add(new GeneralExceptionFilterAttribute());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

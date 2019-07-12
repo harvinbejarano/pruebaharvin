@@ -17,6 +17,6 @@ namespace Service.DTO
         public decimal HourlySalary { get; set; }
         public decimal MonthlySalary { get; set; }
 
-        public abstract decimal AnnualSalary();
+        public abstract decimal AnnualSalary { get; }
     }
 }

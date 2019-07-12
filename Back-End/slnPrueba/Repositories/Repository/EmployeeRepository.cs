@@ -3,6 +3,7 @@ using Repositories.Contract;
 using Repositories.Core;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -19,7 +20,9 @@ namespace Repositories.Repository
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("api/Employees");
+                string baseURL = ConfigurationManager.AppSettings["BaseEndpoint"];
+
+                HttpResponseMessage response = await client.GetAsync(baseURL + "api/Employees");
                 string employeesJson = await response.Content.ReadAsStringAsync();
                 employees =
                     JsonConvert.DeserializeObject<IEnumerable<EmployeeContract>>(employeesJson);

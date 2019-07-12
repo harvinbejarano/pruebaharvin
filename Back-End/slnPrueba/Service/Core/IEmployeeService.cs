@@ -10,5 +10,6 @@ namespace Service.Core
     public interface IEmployeeService
     {
         Task<IEnumerable<Employee>> GetEmployeesAsync();
+        Task<Employee> GetEmployeeAsync(int id);
     }
 }

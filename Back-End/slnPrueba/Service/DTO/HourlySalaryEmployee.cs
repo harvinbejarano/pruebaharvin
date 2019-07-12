@@ -8,9 +8,14 @@ namespace Service.DTO
 {
     public class HourlySalaryEmployee : Employee
     {
-        public override decimal AnnualSalary()
+        public override decimal AnnualSalary
         {
-            return  120 * this.HourlySalary * 12;
+            get
+            {
+                return 120 * this.HourlySalary * 12;
+            }
         }
+
+       
     }
 }
