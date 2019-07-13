@@ -1,3 +1,3 @@
 export const API_HR = {
-  url: 'http://www.masglobal.com/'
+  url: 'http://localhost:51335/'
 };
