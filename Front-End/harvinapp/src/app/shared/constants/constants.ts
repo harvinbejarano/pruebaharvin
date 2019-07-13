@@ -1,3 +1,3 @@
 export const API_HR = {
-	url: 'http://www.harvin.com/'
+  url: 'http://www.masglobal.com/'
 };

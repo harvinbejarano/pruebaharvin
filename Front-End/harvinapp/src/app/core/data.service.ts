@@ -1,13 +1,13 @@
+import { API_HR } from '../shared/constants/constants';
 import { Employee } from './../employee';
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { API_HR } from "../shared/constants/constants";
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private allEmployeeEndpoint: string = "api/Employee";
+  private allEmployeeEndpoint: string = "api/Employee/";
 
   constructor(private http: HttpClient) { }
 
